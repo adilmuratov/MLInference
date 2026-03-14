@@ -1,3 +1,7 @@
 app/__pycache__/
 tests/
 venv/
+.venv/
+app/core/__pycache__/
+app/core/models/__pycache__/
+poetry.lock
