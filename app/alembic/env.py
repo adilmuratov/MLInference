@@ -23,6 +23,7 @@ if config.config_file_name is not None:
 
 from core.config import settings
 from core.models.base import Base
+from core.models.request import Request
 
 target_metadata = Base.metadata
 

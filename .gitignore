@@ -4,4 +4,7 @@ venv/
 .venv/
 app/core/__pycache__/
 app/core/models/__pycache__/
+app/alembic/__pycache__/
+app/alembic/versions/__pycache__/
+app/db.sqlite3
 poetry.lock
