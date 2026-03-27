@@ -16,7 +16,11 @@ class DatabaseHelper:
             url=url,
             echo=echo
         )
-        self.session_factory
+        self.session_factory = async_sessionmaker(
+            bind=self.engine,
+            autoflush=False,
+            expire_on_commit=False
+        )
     
     def get_scoped_session(self):
         session = async_scoped_session(
@@ -31,6 +35,6 @@ class DatabaseHelper:
         await session.close()
 
 db_helper = DatabaseHelper(
-    url=setting.db.url,
+    url=settings.db.url,
     echo=settings.db.echo
 )

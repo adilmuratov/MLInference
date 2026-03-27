@@ -1,6 +1,6 @@
 from sqlalchemy import select
 from sqlalchemy.engine import Result
-from sqlalchemy.ext.session import AsyncSession
+from sqlalchemy.ext.asyncio import AsyncSession
 
 from core.models.request import Request
 from .schemas import RequestCreate
@@ -36,4 +36,4 @@ async def delete_request(
     request: Request
 ) -> None:
     await session.delete(request)
-    await session.commit 
+    await session.commit()

@@ -1,9 +1,11 @@
 from pydantic import BaseModel, ConfigDict
+from typing import Optional
+
 
 class RequestBase(BaseModel):
     model_name: str
     text: str
-    answer: bool
+    answer: Optional[bool] = None
 
 
 class RequestCreate(RequestBase):

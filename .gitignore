@@ -2,6 +2,7 @@ app/__pycache__/
 tests/
 venv/
 .venv/
+app/api/requests/__pycache__/
 app/core/__pycache__/
 app/core/models/__pycache__/
 app/alembic/__pycache__/

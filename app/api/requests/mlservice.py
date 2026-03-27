@@ -7,3 +7,5 @@ def model_predict(
     match model_name:
         case "spam_detection":
             return spam_detection(text)
+        case _:
+            return False

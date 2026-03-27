@@ -14,7 +14,7 @@ def spam_detection(text: str) -> bool:
     with open(model_path, "rb") as f:
         model = pickle.load(f)
 
-    X = vectorizer.transform(text)
+    X = vectorizer.transform([text])
 
     prediction = model.predict(X)
 
